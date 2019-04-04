@@ -8,6 +8,11 @@ module.exports = {
         filename: "bundle.js",
         path: path.join(__dirname, 'public'),
     },
+    plugins : [
+        new webpack.DefinePlugin({
+            'process.env.APP_ENV' : JSON.stringify("browser")
+        })
+    ],
 	module: {
 		rules: [
 			{

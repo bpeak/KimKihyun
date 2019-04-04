@@ -1,5 +1,6 @@
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
+const webpack = require('webpack')
 
 module.exports = {
     mode : 'development',
@@ -10,7 +11,12 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, '/dist'),
 		filename: 'server.js',
-    },
+	},
+	plugins : [
+        new webpack.DefinePlugin({
+            'process.env.APP_ENV' : JSON.stringify("server")
+        })
+    ],
 	module: {
 		rules: [
             {
