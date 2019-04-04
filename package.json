@@ -1,0 +1,30 @@
+{
+  "name": "ImagePlayGround",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/bpeak/ImagePlayGround",
+  "author": "bpeak <bpeakcpeak@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build-server-dev": "webpack --config webpack.serverConfig.dev.js",
+    "build-client-dev": "webpack --config webpack.clientConfig.dev.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
