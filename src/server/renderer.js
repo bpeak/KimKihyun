@@ -8,12 +8,12 @@ import { Provider } from 'react-redux'
 
 const htmlTemplate = fs.readFileSync(path.join(__dirname, 'index.html')).toString()
 
-const renderer = (App, url) => {
+const renderer = (ReactApp, url) => {
     const store = configureStore()
     const JSX = (
         <Provider store={store}>
             <StaticRouter location={url} context={{}}>
-                <App/>
+                <ReactApp/>
             </StaticRouter>
         </Provider>
     )

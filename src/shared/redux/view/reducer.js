@@ -14,8 +14,9 @@ const reducer = handleActions({
         })
     },
     [actionTypes.CLEAR_VIEW] : (state, action) => {
-        console.log(action.payload)
-        return state
+        return ({
+            ...initialState
+        })
     }
 }, initialState)
 

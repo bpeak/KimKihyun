@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
 
 const store = createStore(
     rootReducer,
-    applyMiddleware(logger)
+    // applyMiddleware(logger)
 )
 
 export default store

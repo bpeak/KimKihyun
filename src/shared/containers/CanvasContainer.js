@@ -2,9 +2,11 @@ import { connect } from 'react-redux'
 import Canvas from 'components/atoms/Canvas/Canvas'
 import * as viewActionCreators from 'shared/redux/view/actionCreators'
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return ({
-        viewState : state.view
+        viewState : state.view,
+        className : ownProps.className,
+        size : ownProps.size,
     })
 }
 
